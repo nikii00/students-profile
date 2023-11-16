@@ -2,12 +2,13 @@
     position: fixed;
     width: 250px;
     height: 100%;
-    background-color: #D8F3DC; /* Background color using the provided hex code */
-    color: #74C69D; /* Text color using the provided hex code */
+    background-color: #d595b8; /* Background color using the provided hex code */
+    color: #0a8142; /* Text color using the provided hex code */
     padding: 20px;
 }
 
 .sidebar h1 {
+    color: black;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -23,7 +24,7 @@
 
 .sidebar a {
     text-decoration: none;
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #292728; /* Text color using the provided hex code */
     font-size: 18px;
 }
 
@@ -40,7 +41,7 @@
 /* Body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #95D5B2; /* Background color using the provided hex code */
+    background-color: #d595b8; /* Background color using the provided hex code */
     color: #333; /* Text color */
     margin: 0;
     padding: 0;
@@ -60,8 +61,9 @@ h1 {
 }
 
 .dropdown .dropbtn {
+
     text-decoration: none;
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #0c0c0c; /* Text color using the provided hex code */
     font-size: 18px;
 }
 
@@ -170,6 +172,7 @@ header {
 }
 
 .header-content h1 {
+    color: black;
     font-size: 36px;
     margin: 0;
 }
