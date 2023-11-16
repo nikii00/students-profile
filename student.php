@@ -23,7 +23,7 @@ class Student {
             $stmt->bindParam(':birthday', $data['birthday']);
 
             // Execute the INSERT query
-            $stmt->execute();
+             //$stmt->execute();
 
             // Check if the insert was successful
              
