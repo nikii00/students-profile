@@ -35,7 +35,7 @@ $town = new TownCity($db);
             
             
             <?php
-            $results = $town-> displayAll();
+            $results = $town-> getAll();
             foreach ($results as $result) {
             ?>
             <tr>
