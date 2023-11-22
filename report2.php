@@ -1,32 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Records</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
-
-    <!-- Include the header -->
-    <?php include('templates/header.html'); ?>
-    <?php include('includes/navbar.php'); ?>
-
-    <div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card text-center">
-                    <div class="header">
-                        <h4 class="title">Top 10 Provinces with Most Students</h4>
-                        <p class="category">Student Counts by Province</p>
-                    </div>
-                    <div class="content">
-                        <canvas id="myChartTopProvinces"></canvas>
-                        <?php
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -73,6 +45,29 @@ if (mysqli_num_rows($resultTopProvinces) > 0) {
     echo "No records matching your query were found.";
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Database Report</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="header">
+                        <h4 class="title">Top 10 Provinces with Most Students</h4>
+                        <p class="category">Student Counts by Province</p>
+                    </div>
+                    <div class="content">
+                        <canvas id="myChartTopProvinces"></canvas>
                         <script>
                             const province_count_data = <?php echo json_encode($province_count_data); ?>;
                             const label_chart_data = <?php echo json_encode($label_chart_data); ?>;
@@ -130,8 +125,5 @@ if (mysqli_num_rows($resultTopProvinces) > 0) {
     </div>
 </div>
 
-
-        <!-- Include the footer -->
-    <?php include('templates/footer.html'); ?>
 </body>
 </html>
