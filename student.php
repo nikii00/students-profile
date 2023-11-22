@@ -119,6 +119,8 @@ class Student {
             // Convert gender values
             foreach ($result as &$student) {
                 $student['gender'] = ($student['gender'] == 1) ? 'M' : 'F';
+                $birthdate = new DateTime($student['birthday']);
+                $student['birthday'] = $birthdate->format('F j Y');
             }
     
             return $result;
